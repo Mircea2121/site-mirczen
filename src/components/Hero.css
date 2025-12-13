@@ -1,0 +1,70 @@
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+
+.tiktok {
+  background: white;
+  color: black;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+
+.youtube {
+  background: #ff0000;
+}
+
+.facebook {
+  background: #1877f2;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.07);
+}
+
+.icon {
+  font-size: 20px;
+}
+
