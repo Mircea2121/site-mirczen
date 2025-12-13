@@ -61,7 +61,7 @@ const recipesData = [
   },
    {
     id: 3,
-    title: "Cheesy beef wrap🧀",
+    title: "Cheesy Beef Wrap🧀",
     image: beefImg,
     description: "Ingredients: 500g Beef Mince, 1 Medium onion, 5 tbsp Sunflower oil, Salt, Black pepper, 4 slices of cheddar cheese, 80 g grated mozzarella and cheddar, mayonnaise, ketchup, mustard, lemon juice, 2 large flour tortillas.",
     steps: [
