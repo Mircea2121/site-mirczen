@@ -58,12 +58,12 @@
 
 .recipe-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-wrap: nowrap;
+  gap: 8px;
 }
 
 .recipe-links a {
-  padding: 8px 14px;
+  padding: 6px 10px;
   border-radius: 8px;
   border: 1px solid rgba(255, 0, 0, 0.6);
   color: #fff;
@@ -84,4 +84,57 @@
   object-position: center;
   border-radius: 12px;
   margin-bottom: 16px;
+}
+
+/* ========================= */
+/* HAMBURGER BUTTON (ADD) */
+/* ========================= */
+
+.menu-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu-btn .bar {
+  width: 20px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+}
+
+.recipe-toggle {
+  width: auto;               
+  padding: 6px 14px;           
+  margin: 10px auto 0;         
+  display: block;
+  background: transparent;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  border-radius: 999px;        
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+
+.recipe-toggle:hover {
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.recipe-card.open .recipe-toggle {
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
 }

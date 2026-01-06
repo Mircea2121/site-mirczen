@@ -3,7 +3,7 @@ import "./Recipes.css";
 import ribeyeImg from "../assets/recipes/steaksandwich.jpg";
 import wrapPizzaImg from "../assets/recipes/pizzawrap.jpg";
 import beefImg from "../assets/recipes/beefwrap.jpg";
-
+import { useState } from "react";
 
 
 const recipesData = [
@@ -86,15 +86,24 @@ const recipesData = [
   },
 ];
 
-
 function Recipes() {
+  const [openId, setOpenId] = useState(null);
+
+  const toggleRecipe = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
+  };
+
   return (
     <section className="recipes-section">
       <h2 className="recipes-title">My Recipes</h2>
-
       <div className="recipes-grid">
-  {recipesData.map((recipe) => (
+
+      {recipesData.map((recipe) => {
+      const isOpen = openId === recipe.id;
+
+  return (
     <div className="recipe-card" key={recipe.id}>
+
       <img
           src={recipe.image}
           alt={recipe.title}
@@ -105,11 +114,21 @@ function Recipes() {
 
       <p className="recipe-desc">{recipe.description}</p>
 
-      <ul className="recipe-steps">
-        {recipe.steps.map((step, index) => (
-          <li key={index}>{step}</li>
-        ))}
-      </ul>
+      <button
+         className="recipe-toggle"
+         onClick={() => toggleRecipe(recipe.id)}
+>
+         {isOpen ? "Hide steps" : "View recipe"}
+      </button>
+
+         {isOpen && (
+           <ul className="recipe-steps">
+             {recipe.steps.map((step, index) => (
+               <li key={index}>{step}</li>
+      ))}
+           </ul>
+)}
+
 
       <div className="recipe-links">
         <a href={recipe.links.tiktok} target="_blank" rel="noreferrer">
@@ -126,7 +145,8 @@ function Recipes() {
         </a>
       </div>
     </div>
-  ))}
+  );
+  })}
 </div>
 
     </section>
