@@ -89,7 +89,7 @@ const recipesData = [
 
 function Recipes() {
   return (
-    <section className="recipes-section" id="recipes">
+    <section className="recipes-section">
       <h2 className="recipes-title">My Recipes</h2>
 
       <div className="recipes-grid">

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,15 +43,16 @@ function Navbar() {
 
           {/* Dropdown menu */}
           <div className={`menu-dropdown ${menuOpen ? "open" : ""}`}>
-            <a href="#socials" onClick={() => setMenuOpen(false)}>
+            <a href="/#socials" onClick={() => setMenuOpen(false)}>
               Social
             </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
+            <a href="/#about" onClick={() => setMenuOpen(false)}>
               About
             </a>
-            <a href="#recipes" onClick={() => setMenuOpen(false)}>
+            <Link to="/recipes" onClick={() => setMenuOpen(false)}>
               Recipes
-            </a>
+            </Link>
+
           </div>
         </div>
       </div>
