@@ -6,7 +6,7 @@
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 5px 25px rgba(0, 255, 234, 0.15);
+  box-shadow: 0 5px 25px rgba(20, 229, 212, 0.615);
 }
 
 
@@ -58,4 +58,77 @@
 
 .nav-links a:hover {
   color: #00d0ff;
+}
+
+/* ========================= */
+/* HAMBURGER BUTTON (ADD) */
+/* ========================= */
+
+.menu-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu-btn .bar {
+  width: 20px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ========================= */
+/* DROPDOWN MENU (ADD) */
+/* ========================= */
+
+.menu-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  padding: 10px;
+  min-width: 160px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.25s ease;
+}
+
+.menu-dropdown a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-dropdown a:hover {
+  color: rgba(20, 229, 212, 0.615);
+}
+
+.menu-dropdown.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 }
