@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaTiktok, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,9 +9,16 @@ const Footer = () => {
       <h3 className="footer-title">MircZen</h3>
 
       <div className="footer-links">
-        <a href="#home">Home</a>
-        <a href="#socials">Social</a>
-        <a href="#about">About</a>
+        <Link 
+          to="/"
+          onClick={() => 
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+        >
+          Home
+        </Link>
+        <Link to="/#socials">Social</Link>
+        <Link to="/#about">About</Link>
       </div>
 
       <div className="footer-socials">

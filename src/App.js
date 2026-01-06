@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Recipes from "./components/Recipes"; 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -29,6 +31,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToHash />
+      <ScrollToTop />
       <Routes>
         {/* Home page */}
         <Route
